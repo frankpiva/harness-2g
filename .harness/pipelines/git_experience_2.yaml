@@ -1,0 +1,30 @@
+pipeline:
+  name: git_experience_2
+  identifier: git_experience_2
+  projectIdentifier: sandbox
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Custom
+        identifier: Custom
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Shell Script
+                  identifier: Shell_Script
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "I am a pipeline stored in GitHub."
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
